@@ -1,12 +1,17 @@
 #!/bin/bash
 
+# 30:for fg black
+# 41: for bg red
+# 1:for hightlight
+# no limit in seq
+COLOR_BLACK="\033[1;41;30m"
+COLOR_END="\033[0m"
+
 COLOR_RED="\033[0;31m"
 COLOR_YELLOW="\033[1;33m"
 COLOR_BLUE="\033[4;34m"
 COLOR_GREEN="\033[3;32m"
 COLOR_PURPLE="\033[5;35m"
-
-COLOR_END="\033[0m"
 
 function echoRed(){
     echo -e "${COLOR_RED}$@${COLOR_END}"
