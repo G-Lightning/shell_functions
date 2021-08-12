@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # !!!!!!!!!!!!!!!!!!!!
-# function with exit code, loop-"while" will exit.
+# usage functions with `exit` command, loop-"while" will exit.
 # the functions is for demo usage.
 
 function usage_cat(){
@@ -58,6 +58,7 @@ OPTIONS:
     exit 1
 }
 
+# getopt for shell options usage
 ARGS=`getopt -o cefps:h --long cat,echo1,echo2,print,show:,help -n "$0" -- "$@"`
 [ $? -ne 0 ] && usage
 eval set -- "${ARGS}"
